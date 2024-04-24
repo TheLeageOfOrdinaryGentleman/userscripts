@@ -21,6 +21,11 @@
         element.click();
     })
 
+    // Click the new allow access button
+    waitForElement('.awsui_variant-primary_vjswe_2od9j_251').then(element => {
+        element.click();
+    })
+
 
     waitForElement('.awsui_header_mx3cw_1459o_226').then(element => {
         if(element.innerHTML.indexOf('approved') >= 0) {
