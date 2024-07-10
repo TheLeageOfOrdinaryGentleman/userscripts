@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto AWS SSO Login
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  try to take over the world!
 // @author       TheLeagueOfOrdinaryGentlemen
 // @match        https://*.awsapps.com/start/*
@@ -26,6 +26,9 @@
         element.click();
     })
 
+    waitForElement('.awsui_variant-primary_vjswe_1yxqk_251').then(element => {
+        element.click();
+    })
 
     waitForElement('.awsui_header_mx3cw_1459o_226').then(element => {
         if(element.innerHTML.indexOf('approved') >= 0) {
